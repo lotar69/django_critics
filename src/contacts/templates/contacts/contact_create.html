@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Créer une Personnalité.</title>
+{% endblock%}
+
+{% block content %}
+    <h1>Créer une Personnalité.</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Créer">
+    </form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Modification de Personnalité.</title>
+{% endblock%}
+
+{% block content %}
+<h1>Modifier la personnalité</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Modifier">
+</form>
+{% endblock %}
