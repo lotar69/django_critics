@@ -25,7 +25,7 @@ class Contact(models.Model):
     birthplace = models.CharField(max_length=64, null=True)
     photo = models.ImageField(upload_to='uploads/', null=True)
     like = models.IntegerField(null=True)
-    slug = models.SlugField()
+    slug = models.SlugField(null=True, blank=True)
 
     class Meta:
         ordering = ["last_name"]
@@ -43,5 +43,5 @@ class Contact(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(self.full_name)
+            self.slug = slugify(f"{self.first_name} {self.last_name}")
         super().save(*args, **kwargs)

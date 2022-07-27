@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 
 {% block title %}
-
+<title>La page de {{ contact.full_name }}</title>
 {% endblock%}
 
 {% block content %}
-
+<p>{{ contact.first_name }}</p>
+<p>{{ contact.last_name }}</p>
 {% endblock %}

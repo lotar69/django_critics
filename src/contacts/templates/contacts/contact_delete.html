@@ -2,8 +2,12 @@
 
 {% block title %}
 
-{% endblock%}
+{% endblock %}
 
 {% block content %}
-
+<h1>Etes-vous sur de vouloir supprimer {{ contact.full_name }}</h1>
+<form method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Supprimer.">
+</form>
 {% endblock %}
