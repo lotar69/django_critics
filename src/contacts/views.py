@@ -14,7 +14,7 @@ class ContactCreate(CreateView):
     model = Contact
     context_object_name = "contact"
     template_name = "contacts/contact_create.html"
-    fields = ["first_name", "last_name", "role", "nationality"]
+    fields = ["first_name", "last_name", "role", "nationality", "bio", "creator"]
 
 
 class ContactDetail(DetailView):

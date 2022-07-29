@@ -6,5 +6,7 @@
 {% block content %}
 {% for contact in contacts %}
     <h2>{{ contact.full_name }}</h2>
+    <p>{{ contact.bio }}</p>
+    <p>{{ contact.creator_or_default }}</p>
 {% endfor %}
 {% endblock %}
