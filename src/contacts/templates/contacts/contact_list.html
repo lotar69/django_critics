@@ -8,5 +8,9 @@
     <h2>{{ contact.full_name }}</h2>
     <p>{{ contact.bio }}</p>
     <p>{{ contact.creator_or_default }}</p>
+    <form action="{% url 'contacts:detail' slug=contact.slug %}">
+        <input type="submit" value="GO">
+    </form>
+    </form>
 {% endfor %}
 {% endblock %}

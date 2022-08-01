@@ -1,0 +1,10 @@
+{% block title %}
+{% endblock %}
+
+{% block content %}
+<form method="POST">
+    {{ form }}
+    {% csrf_token %}
+    <input type="submit" value="Supprimer">
+</form>
+{% endblock %}

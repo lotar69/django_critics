@@ -1,0 +1,11 @@
+{% block title %}
+{% endblock %}
+
+{% block content %}
+<h1>Ajouter une Série.</h1>
+<form method="POST">
+{% csrf_token %}
+{{ form.as_p }}
+    <input type="submit"  value="Créer">
+</form>
+{% endblock %}

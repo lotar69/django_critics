@@ -11,6 +11,7 @@ User = get_user_model()
 
 class Contact(models.Model):
     ROLES = (
+
         ('Actor', 'Actor'),
         ('Director', 'Director'),
         ('Musician', 'Musican'),
