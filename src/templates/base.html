@@ -6,12 +6,10 @@
     {% endblock %}
 </head>
 <body>
-<nav>
-<a href="{% url 'contacts:home' %}">Acceuil</a>
-</nav>
     {% if request.user.is_authenticated %}
-    <a href="{% url 'contacts:create' %}">Ajouter une Personnalité</a>
-    <a href="{% url 'series:create' %}">Ajouter une Serie</a>
+    <a href="{% url 'contacts:home' %}">Personnalités</a>
+    <a href="{% url 'series:home' %}">Séries</a>
+    <a href="{% url 'games:home' %}">Jeux Vidéo</a>
     {% endif %}
 {% block content %}
 {% endblock %}

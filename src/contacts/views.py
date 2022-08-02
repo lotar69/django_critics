@@ -26,7 +26,7 @@ class ContactUpdate(UpdateView):
     model = Contact
     context_object_name = "contact"
     template_name = "contacts/contact_edit.html"
-    fields = ["first_name", "last_name", "role", "nationality",]
+    fields = ["first_name", "last_name", "role", "nationality"]
 
 
 class ContactDelete(DeleteView):

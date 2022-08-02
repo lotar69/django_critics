@@ -31,7 +31,7 @@ class Series(models.Model):
     YEARS = [(i, i) for i in years]
 
     title = models.CharField(max_length=256)
-    year = models.DateField(blank=True, null=True)
+    year = models.IntegerField(blank=True, null=True)
     country = models.CharField(max_length=128)
     resume = models.TextField(max_length=2048)
     slug = models.SlugField(blank=True)
@@ -51,5 +51,4 @@ class Series(models.Model):
 
     @staticmethod
     def get_absolute_url():
-        return reverse("series:home")
-
+        return reverse("games:home")

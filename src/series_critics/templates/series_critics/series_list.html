@@ -8,8 +8,8 @@
     {% for serie in series %}
         <h1>{{ serie.title }}</h1>
         {% if request.user.is_authenticated %}
-        <a href="{% url 'series:edit' slug=serie.slug %}">Editer</a>
-        <a href="{% url 'series:delete' slug=serie.slug %}">Supprimer</a>
+            <a href="{% url 'series:edit' slug=serie.slug %}">Editer</a>
+            <a href="{% url 'series:delete' slug=serie.slug %}">Supprimer</a>
         {% endif %}
         <p>{{ serie.year }}</p>
         <p>{{ serie.country }}</p>
